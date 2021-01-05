@@ -1,0 +1,15 @@
+.contenido{
+   @apply px-2 mx-auto max-w-7xl;
+}
+@media(min-width:640px){
+.contenido{
+    @apply px-6;
+
+  }
+}
+@media(min-width:1024px){
+    .contenido{
+        @apply px-8;
+    
+      }
+}
