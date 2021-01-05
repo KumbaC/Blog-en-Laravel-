@@ -81,6 +81,8 @@ class PostController extends Controller
      */
     public function destroy(Post $Post)
     {
-        
+        $posts = Post::find($Post->id);
+        $posts->delete();
+        return Redirect()->route('admin.posts.index')->with('info3','La categoria se elimino con exito! ');
     }
 }
