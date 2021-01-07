@@ -25,7 +25,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view("admin.posts.create");
     }
 
     /**
@@ -47,7 +47,7 @@ class PostController extends Controller
      */
     public function show(Post $Post)
     {
-        //
+        return view("admin.posts.show", compact('post'));
     }
 
     /**
@@ -58,7 +58,7 @@ class PostController extends Controller
      */
     public function edit(Post $Post)
     {
-        //
+        return view("admin.posts.edit", compact('Post'));
     }
 
     /**
@@ -83,6 +83,6 @@ class PostController extends Controller
     {
         $posts = Post::find($Post->id);
         $posts->delete();
-        return Redirect()->route('admin.posts.index')->with('info3','La categoria se elimino con exito! ');
+        return Redirect()->route('admin.posts.index')->with('info3','El posts se elimino con exito! ');
     }
 }
