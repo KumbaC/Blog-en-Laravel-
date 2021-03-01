@@ -1,3 +1,4 @@
+@can('admin.tags.create')
 @extends('adminlte::page')
 
 @section('title', 'Blog')
@@ -55,3 +56,4 @@ $(document).ready( function() {
 });
 </script>
 @stop
+@endcan

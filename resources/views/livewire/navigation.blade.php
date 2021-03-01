@@ -28,8 +28,8 @@
       <!--Logos-->
       <div class="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start">
         <div class="flex items-center flex-shrink-0">
-          <a href="/"><img class="block w-auto h-8 lg:hidden" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow"></a>
-          <a href="/"><img class="hidden w-auto h-8 lg:block" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow"></a>
+          <a href="/"><img class="block w-auto h-10 lg:hidden" src="/storage/image/venezuela.png" alt="KumbaC"></a>
+          <a href="/"><img class="hidden w-auto h-10 lg:block" src="/storage/image/fds.png" alt="KumbaC"></a>
         </div>
 
         <!--Menu LG-->
@@ -74,7 +74,9 @@
           -->
           <div x-show="open" x-on:click.away="open = false" class="absolute right-0 w-48 py-1 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
             <a href="{{ route('profile.show') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Perfil</a>
+            @can('admin.index')
             <a href="{{ route('admin.index') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Administración</a>
+            @endcan
                <!-- Authentication -->
               <form method="POST" action="{{ route('logout') }}">
                 @csrf

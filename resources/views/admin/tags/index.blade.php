@@ -1,15 +1,16 @@
+@can('admin.tags.index')
 @extends('adminlte::page')
 
 @section('title', 'Blog')
 
 @section('content_header')
-    <h1>Inicio de los tags del blog</h1></a>
+    <h1 class="text-center text-primary">LISTA DE LOS TAGS</h1></a>
 
 @stop
 
 @section('content')
 @if(session('info'))
-<div class="alert alert-primary">
+<div class="alert alert-success">
 <strong>{{session('info')}}</strong>
 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
@@ -17,7 +18,7 @@
 </div>
 @endif
 @if(session('info2'))
-<div class="alert alert-success">
+<div class="alert alert-primary">
 <strong>{{session('info2')}}</strong>
 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
@@ -70,3 +71,4 @@
   </div>
 </div>
 @stop
+@endcan

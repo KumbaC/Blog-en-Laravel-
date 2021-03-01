@@ -1,3 +1,4 @@
+@can('admin.tags.edit')
 @extends('adminlte::page')
 
 @section('title', 'Blog')
@@ -57,3 +58,4 @@ $(document).ready( function() {
 });
 </script>
 @stop
+@endcan

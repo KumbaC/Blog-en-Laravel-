@@ -2,7 +2,7 @@
 <div class="py-8 contenido">
    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
      @foreach($posts as $post)
-     <article class="w-full bg-center bg-cover h-80 @if($loop->first) md:col-span-2  @endif" style="background-image: url({{Storage::url($post->image ? $post->image->url : 'post not found')}})">
+     <article class="w-full bg-center bg-cover h-80 @if($loop->first) md:col-span-2  @endif" @if($post->image) style="background-image: url({{Storage::url($post->image->url)}})" @else style="background-image: url(/storage/image/interrogacion.gif)"   @endif>
    <div class="flex flex-col justify-center w-full h-full px-8">
 
     <div>

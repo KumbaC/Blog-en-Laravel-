@@ -1,20 +1,18 @@
+@can('admin.index')
 @extends('adminlte::page')
 
 @section('title', 'Blog')
 
 @section('content_header')
-    <a href="/"><h1>Ir al blog</h1></a>
+    <h1 class="text-center rounded text-warning bg-dark">BIENVENIDO A LA ADMINISTRACIÓN DEL BLOG</h1></a>
 
 @stop
 
 @section('content')
-    <p>Bienvenido al hermoso panel de administración</p>
+
 @stop
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
 @stop
-
-@section('js')
-    <script> console.log('Hi!'); </script>
-@stop
+@endcan

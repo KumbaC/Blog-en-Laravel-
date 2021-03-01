@@ -1,9 +1,10 @@
+@can('admin.categories.index')
 @extends('adminlte::page')
 
 @section('title', 'Blog')
 
 @section('content_header')
-    <a href="/"><h1>Ir al blog</h1></a>
+    <h1 class="text-center text-primary">LISTA DE LAS CATEGORIAS</h1>
 
 @stop
 
@@ -71,3 +72,4 @@
   </div>
 </div>
 @stop
+@endcan
